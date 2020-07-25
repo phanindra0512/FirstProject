@@ -1,13 +1,26 @@
 import React from 'react'
 import { View, Text, StatusBar } from 'react-native'
+import { NavigationContainer, useNavigation } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import MobileNumber from './src/screens/MobileNumber'
+import Otp from './src/screens/Otp'
+import Login from './src/screens/Login'
+
+
+const Stack = createStackNavigator()
+
+
 function App() {
   return (
-    <View style={{ flex: 1 }}>
-      <StatusBar barStyle="dark-content" backgroundColor="pink" />
-      <View style={{ flex: 1, backgroundColor: 'red', alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#fff', fontWeight: 'bold' }}>This is phani</Text>
-      </View>
-    </View>
+
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName={MobileNumber}>
+        <Stack.Screen name="MobileNumber" component={MobileNumber} options={{ headerShown: false }} />
+        <Stack.Screen name="Otp" component={Otp} options={{ headerShown: false }} />
+        <Stack.Screen name="Login" component={Login} />
+
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
