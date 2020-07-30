@@ -14,10 +14,11 @@ function App() {
   return (
 
     <NavigationContainer>
+      <StatusBar barStyle="light-content" backgroundColor="#EF820D" />
       <Stack.Navigator initialRouteName={MobileNumber}>
         <Stack.Screen name="MobileNumber" component={MobileNumber} options={{ headerShown: false }} />
         <Stack.Screen name="Otp" component={Otp} options={{ headerShown: false }} />
-        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
 
       </Stack.Navigator>
     </NavigationContainer>
