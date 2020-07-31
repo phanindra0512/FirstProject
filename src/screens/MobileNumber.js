@@ -10,7 +10,7 @@ function MobileNumber({ navigation }) {
         <View style={{ flex: 1, backgroundColor: 'orange', }}>
             <View style={{ flex: 0.4, backgroundColor: '#fff', marginHorizontal: 10, borderTopLeftRadius: 15, borderTopRightRadius: 15, bottom: 0, left: 0, right: 0, height: 230, position: 'absolute' }}>
                 <Text style={{ fontSize: 22, fontWeight: 'bold', textAlign: 'center', paddingTop: 30 }}>Mobile </Text>
-                <View style={{ flex: 0.5, marginTop: 30, flexDirection: 'row', justifyContent: 'space-evenly', }}>
+                <View style={{ flex: 0.8, marginTop: 30, justifyContent: 'space-evenly', }}>
                     <View style={{ flex: 0.8, alignItems: 'center', justifyContent: 'center' }}>
                         <TextInput
                             style={{ width: 250 }}
@@ -24,7 +24,7 @@ function MobileNumber({ navigation }) {
                     </View>
 
                     <Icon raised
-                        containerStyle={{ alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }}
+                        containerStyle={{ alignSelf: 'flex-end', marginRight: 20 }}
                         name='heartbeat'
                         type='font-awesome'
                         reverse
