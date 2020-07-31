@@ -3,8 +3,9 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import { Card, TextInput, Button, Colors } from "react-native-paper";
 import { Icon } from "react-native-elements";
 
-function Login() {
+function Login({ navigation }) {
     const [isMobile, setIsMobile] = useState('')
+    const [isPassword, setIsPassword] = useState('')
 
     return (
         <View style={{ flex: 1, backgroundColor: 'orange' }}>
@@ -30,12 +31,12 @@ function Login() {
                 <View style={{ flex: 0.7, alignItems: 'center', justifyContent: 'center' }}>
                     <TextInput
                         style={{ width: 250 }}
-                        keyboardType="number-pad"
+                        secureTextEntry
                         label="Password"
-                        value={isMobile}
+                        value={isPassword}
                         mode="outlined"
                         dense
-                        onChangeText={isMobile => setIsMobile(isMobile)}
+                        onChangeText={isPassword => setIsPassword(isPassword)}
                     />
                 </View>
 
@@ -45,18 +46,19 @@ function Login() {
 
                 <View style={{ flex: 0.6, alignItems: 'flex-end', paddingRight: 20 }}>
                     <Icon raised
-                        containerStyle={{}}
+                        // disabled={isMobile == "" || isPassword == "" ? true : false}
+                        // containerStyle={{}}
                         name='heartbeat'
                         type='font-awesome'
                         reverse
                         size={20}
                         color='orange'
-                    // onPress={() => navigation.navigate('Otp')} 
+                        onPress={() => navigation.navigate('Dashboard')}
                     />
                 </View>
                 <View style={{ flex: 0.3, flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'center' }}>
                     <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Don't have an account ? </Text>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold', color: 'orange' }}>Signup</Text>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold', color: 'orange' }} onPress={() => navigation.navigate('MobileNumber')}>Signup</Text>
                 </View>
 
 
