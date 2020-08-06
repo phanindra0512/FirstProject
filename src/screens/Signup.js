@@ -82,8 +82,8 @@ function Signup({ navigation }) {
                         />
                         <Icon raised
                             containerStyle={{ alignSelf: 'flex-end', marginRight: 20 }}
-                            name='heartbeat'
-                            type='font-awesome'
+                            name='arrow-forward'
+                            type='Ionicons'
                             size={20}
                             reverse
                             color='orange'

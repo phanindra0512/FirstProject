@@ -7,6 +7,7 @@ function Login({ navigation }) {
     const [isMobile, setIsMobile] = useState('')
     const [isPassword, setIsPassword] = useState('')
 
+
     return (
         <View style={{ flex: 1, backgroundColor: 'orange' }}>
             <View style={{ flex: 0.3, alignItems: 'center', justifyContent: 'flex-end' }}>
@@ -48,11 +49,12 @@ function Login({ navigation }) {
                     <Icon raised
                         // disabled={isMobile == "" || isPassword == "" ? true : false}
                         // containerStyle={{}}
-                        name='heartbeat'
-                        type='font-awesome'
+                        name='arrow-forward'
+                        type='Ionicons'
                         reverse
                         size={20}
                         color='orange'
+                        // onPress={() => onSubmit()}
                         onPress={() => navigation.navigate('Dashboard')}
                     />
                 </View>

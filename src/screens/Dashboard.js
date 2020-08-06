@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, Image, ScrollView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+
+
+
 function Dashboard({ navigation }) {
+
 
     const groceriesData = [
         {
@@ -140,6 +144,7 @@ function Dashboard({ navigation }) {
             <View style={{ flex: 1, backgroundColor: '#fff' }}>
                 <View style={{ flex: 1, marginVertical: 10 }}>
                     <Text style={{ paddingLeft: 10, paddingTop: 10, fontSize: 18, fontWeight: 'bold', color: 'orange' }}>GROCERIES</Text>
+                    {/* <Text>user details : {isData[0].isMobile} {isData[0].isPassword}</Text> */}
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                         {
                             groceriesData.map((item, index) => {
@@ -154,7 +159,7 @@ function Dashboard({ navigation }) {
                                             prdDiscount: item.productDiscount
                                         })}>
                                         <View style={{ flex: 1, flexDirection: 'row', }}>
-                                            <View style={{ flex: 0.5, marginHorizontal: 10 }}>
+                                            <View style={{ flex: 0.5, marginHorizontal: 10, }}>
                                                 <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
                                                     <Image source={{ uri: item.productImage }} style={{ width: 90, height: 100, borderRadius: 10 }} />
                                                 </View>

@@ -7,8 +7,10 @@ import Otp from './src/screens/Otp'
 import Login from './src/screens/Login'
 import Signup from './src/screens/Signup'
 import Dashboard from './src/screens/Dashboard'
-import { Icon } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/Ionicons'
 import ProductDetails from './src/screens/ProductDetails'
+import CartDetails from './src/screens/CartDetails'
+import Payment from './src/screens/Payment'
 
 const Stack = createStackNavigator()
 
@@ -30,20 +32,16 @@ function App() {
             headerTintColor: '#fff',
             headerTitleStyle: {
               fontWeight: 'bold',
-              fontSize: 25
+              fontSize: 23
             },
             headerStyle: {
               backgroundColor: 'orange'
             },
             headerLeft: () => (
-              <Icon
-                raised
-                name='heartbeat'
-                type='font-awesome'
-                reverse
-                size={20}
-                color='orange'
-              />
+              <Icon name="menu" size={30} color="#fff" style={{ paddingLeft: 15 }} />
+            ),
+            headerRight: () => (
+              <Icon name="ios-cart" size={25} color="#fff" style={{ paddingRight: 15 }} />
             )
           }}
 
@@ -55,7 +53,37 @@ function App() {
             headerTintColor: '#fff',
             headerTitleStyle: {
               fontWeight: 'bold',
-              fontSize: 25
+              fontSize: 23
+            },
+            headerStyle: {
+              backgroundColor: 'orange'
+            },
+          }}
+        />
+
+        <Stack.Screen name="CartDetails" component={CartDetails}
+          options={{
+            title: "Cart Detail",
+            headerTitleAlign: 'center',
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 23
+            },
+            headerStyle: {
+              backgroundColor: 'orange'
+            },
+          }}
+        />
+
+        <Stack.Screen name="Payment" component={Payment}
+          options={{
+            title: "Payment",
+            headerTitleAlign: 'center',
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 23
             },
             headerStyle: {
               backgroundColor: 'orange'

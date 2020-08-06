@@ -25,8 +25,8 @@ function MobileNumber({ navigation }) {
 
                     <Icon raised
                         containerStyle={{ alignSelf: 'flex-end', marginRight: 20 }}
-                        name='heartbeat'
-                        type='font-awesome'
+                        name='arrow-forward'
+                        type='Ionicons'
                         reverse
                         size={20}
                         color='orange'
